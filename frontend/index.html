@@ -3,15 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App</title>
+  <title>The Tower Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <header class="navbar">
+
+    <div class="logo">
+      <img src="./assets/thetower-live-logo.jpg" alt="The Tower Live Logo">
+    </div>
+
+    <div class="nav-links">
+      <ul>
+        <li><a href="#" class="nav-links-icon"><img src="./assets/email-icon-white.svg" alt="Inbox"></a></li>
+        <li><a href="#" class="nav-links-icon"><img src="./assets/profile-icon.svg" alt="Profile"></a></li>
+        <li><a href="#" class="nav-links-icon"><img src="./assets/settings-icon.svg" alt="Settings"></a></li>
+      </ul>
+    </div>
+
+  </header>
+
   <main>
-    <h1>Vanilla Frontend + Node.js API</h1>
-    <button id="fetch-btn">Fetch Data from Node.js</button>
-    <p id="response-text">Waiting for request...</p>
+    <section class="main-content">
+      <div class="livestream" id="livestream">
+        <p>Live stream down :( will be back soon.</p>
+      </div>
+      <div class="chat" id="chat">
+        <p>Chat is not programmed yet. Check back soon :).</p>
+      </div>
+    </section>
+
   </main>
+
+
   <script src="app.js"></script>
 </body>
 </html>

@@ -1,20 +1,122 @@
-body {
-  font-family: system-ui, sans-serif;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
+* {
   margin: 0;
-  background: #f4f4f9;
+  padding: 0;
+  box-sizing: border-box;
 }
-main {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
+
+:root {
+  --bg-color: #121212;
+  --cont-color: #1E1E1E;
+  --text-color: #ffffff;
+}
+
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  max-width: 360px;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--bg-color);
+}
+
+
+
+/* Navbar styles */
+.navbar img { 
+  height: 24px;
+  width: 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  height: 60px;
+  color: var(--text-color);
+  background: var(--cont-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo, .nav-title, .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-links a img {
+  filter: invert(1);
+}
+
+.nav-links-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.nav-links-icon img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Stream container styles */
+.livestream {
+  width: 100%;
+  height: 45vh;
+  background: var(--cont-color);
+}
+
+.livestream p {
+  color: var(--text-color);
   text-align: center;
+  padding: 2rem;
 }
-button {
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  cursor: pointer;
+
+
+
+/* Chat container styles */
+.chat {
+  width: 100%;
+  height: 47vh;
+  background: var(--cont-color);
+  margin-bottom: 0;
 }
+
+.chat p {
+  color: var(--text-color);
+  text-align: center;
+  padding: 2rem;
+}
+
+
+/* Footer styles */
