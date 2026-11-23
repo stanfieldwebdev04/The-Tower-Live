@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tower Live | Settings</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="settings-body">
+
+    <header class="settings-navbar">
+        <div class="title">
+            <h1>Settings</h1>
+        </div>
+
+        <div class="back-button">
+            <a href="index.html" class="nav-links-icon"><img src="./assets/back-button-icon.svg" alt="Back"></a>
+        </div>
+    </header>
+<!-- Settings Screen -->
+  <main class="settings-list">
+
+    <div class="card-wrapper">
+        <button type="button" class="settings-card" data-modal-target="appearance-modal">
+            <h2>Appearance and Theme</h2>
+            <p>Customize the appearance and theme of the application.</p>        
+        </button>
+    </div>
+
+    <div class="card-wrapper">
+        <button type="button" class="settings-card" data-modal-target="game-alerts-modal">
+            <h2>Game Alerts</h2>
+            <p>Wave milestones, perk pings, round summaries, and other game-related notifications.</p>
+        </button>
+    </div>
+
+    <div class="card-wrapper">
+        <button type="button" class="settings-card" data-modal-target="stream-bandwidth-modal">
+            <h2>Stream & Bandwidth</h2>
+            <p>Autoplay, chat-only mode, and other stream-related settings.</p>
+        </button>
+    </div>
+
+    <div class="card-wrapper">
+        <button type="button" class="settings-card" data-modal-target="privacy-inbox-modal">
+            <h2>Privacy and Inbox</h2>
+            <p>Manage your privacy settings and inbox preferences.</p>        
+        </button>
+    </div>
+
+    <div class="card-wrapper">
+        <button type="button" class="settings-card" data-modal-target="account-modal">
+            <h2>Account</h2>
+            <p>Manage your account settings and profile information.</p>        
+        </button>
+    </div>
+    
+
+
+
+    <!-- Pop-up Modals -->
+     <dialog id="appearance-modal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Appearance and Theme</h2>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="setting-row">
+
+                    <input type="checkbox" id="toggle-light" class="toggle-input" role="switch">
+
+                    <label for="toggle-light" class="toggle-switch-modal-label" aria-label="Enable Light Mode">
+                        <span class="toggle-text on" aria-hidden="true">ON</span>
+                        <span class="toggle-text off" aria-hidden="true">OFF</span>
+                    </label>
+
+                    <span class="toggle-label">Enable Light Mode</span>
+
+                </div>
+
+                <div class="setting-row">
+
+                    <input type="checkbox" id="toggle-time" name="timestamps" class="toggle-input" role="switch">
+
+                    <label for="toggle-time" class="toggle-switch-modal-label" aria-label="Show Timestamps in Chat">
+                        <span class="toggle-text on" aria-hidden="true">ON</span>
+                        <span class="toggle-text off" aria-hidden="true">OFF</span>
+                    </label>
+
+                    <span class="toggle-label">Show Timestamps in Chat</span>
+
+                </div>
+
+                <div class="setting-row">
+                    <input type="checkbox" name="chat-density" id="chat-density">
+                    <span>Chat Density</span>
+                </div>
+
+                <button type="button" class="close-modal">Save & Close</button>
+            </div>
+        </div>
+     </dialog>
+
+     <dialog id="game-alerts-modal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Game Alerts</h2>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="setting-row">
+                    
+                    <input type="checkbox" id="toggle-game-alerts" name="game-alerts" class="toggle-input" role="switch">
+
+                    <label for="toggle-game-alerts" class="toggle-switch-modal-label" aria-label="Enable Game Alerts">
+                        <span class="toggle-text on" aria-hidden="true">ON</span>
+                        <span class="toggle-text off" aria-hidden="true">OFF</span>
+                    </label>
+
+                    <span class="toggle-label">Enable Game Alerts</span>
+                </div>
+
+                <button type="button" class="close-modal">Save & Close</button>
+            </div>
+        </div>
+     </dialog>
+
+     <dialog id="stream-bandwidth-modal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Stream & Bandwidth</h2>
+            </div>
+
+            <div class="modal-body">
+                <p>Autoplay, chat-only mode, and other stream-related settings.</p>
+                <button type="button" class="close-modal">Save & Close</button>
+            </div>
+        </div>
+     </dialog>
+
+     <dialog id="privacy-inbox-modal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy and Inbox</h2>
+            </div>
+
+            <div class="modal-body">
+                <p>Manage your privacy settings and inbox preferences.</p>
+                <button type="button" class="close-modal">Save & Close</button>
+            </div>
+        </div>
+     </dialog>
+
+     <dialog id="account-modal" class="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Account</h2>
+            </div>
+
+            <div class="modal-body">
+                <p>Manage your account settings and profile information.</p>
+                <button type="button" class="close-modal">Save & Close</button>
+            </div>
+        </div>
+     </dialog>
+     
+  </main>
+  
+  <script src="app.js"></script>
+</body>
+</html>
