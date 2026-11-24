@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap">
   <link rel="stylesheet" href="./style.css">
+
+  <script>
+    applyTheme(localStorage.getItem('theme'));
+  </script>
 </head>
 
 <body class="index-body">
@@ -20,9 +24,9 @@
 
     <div class="nav-links">
       <ul>
-        <li><a href="messages.html" class="nav-links-icon"><img src="./assets/email-icon-white.svg" alt="Inbox"></a></li>
-        <li><a href="profile.html" class="nav-links-icon"><img src="./assets/profile-icon.svg" alt="Profile"></a></li>
-        <li><a href="settings.html" class="nav-links-icon"><img src="./assets/settings-icon.svg" alt="Settings"></a></li>
+        <li><a href="messages.html" class="nav-links-icon"><img src="./assets/email-icon-white.svg" alt="Inbox" id="nav-img"></a></li>
+        <li><a href="profile.html" class="nav-links-icon"><img src="./assets/profile-icon.svg" alt="Profile" id="nav-img"></a></li>
+        <li><a href="settings.html" class="nav-links-icon"><img src="./assets/settings-icon.svg" alt="Settings" id="nav-img"></a></li>
       </ul>
     </div>
 

@@ -24,6 +24,13 @@
 
 
 
+/* Light theme styles */
+.light-theme {
+  --bg-color: #ffffff;
+  --cont-color: #f0f0f0;
+  --text-color: #000000;
+}
+
 /* HOME PAGE STYLES */
 
 
@@ -74,7 +81,7 @@
   color: var(--text-color);
 }
 
-.nav-links a img {
+.invert {
   filter: invert(1);
 }
 
@@ -157,10 +164,6 @@
   color: var(--text-color);
   background: var(--cont-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.back-button img {
-  filter: invert(1);
 }
 
 .back-button img:active {
