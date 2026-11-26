@@ -12,6 +12,33 @@
 
 <body class="index-body">
 
+<!-- Darkened backdrop -->
+
+<div class="auth-backdrop"></div>
+
+<!-- Full-Screen Auth Gate -->
+ 
+  <div id="auth-gate">
+    <form id="auth-form">
+      <h2 id="auth-title">Create an Account</h2>
+      <p>Sign up to watch the live stream and join the conversation.</p>
+
+      <input id="auth-username" type="text" placeholder="Username" required minlength="3">
+      <input id="auth-password" type="password" placeholder="Password" required minlength="6">
+      
+      <button type="submit" id="auth-submit">Create Account</button>
+
+    </form>
+
+    <div id="auth-gate-footer">
+      <p id="auth-error" style="display: none;"></p>
+      <p>Already have an account?
+        <a href="#" id="auth-gate-link">Sign in.</a>
+      </p>
+    </div>
+
+  </div>
+
   <header class="navbar">
 
     <div class="logo">
