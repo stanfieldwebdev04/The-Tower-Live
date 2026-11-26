@@ -33,10 +33,12 @@
 
 /* Auth gate styles */
 #auth-gate {
-  width: 100%;
+  width: 360px;
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
+  margin-inline: auto;
   z-index: 1000;
   background: var(--bg-color);
   color: var(--text-color);
