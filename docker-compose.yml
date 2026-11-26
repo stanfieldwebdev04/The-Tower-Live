@@ -1,8 +1,34 @@
 services:
   nodejs:
     build: ./app
+    environment:
+      DATABASE_URL: postgresql://thetower_db:thetower_db@db:5432/stream_chat_db
+      JWT_SECRET: d282a06401c7cdbbc8b4210db0b99f77b119a8d3eadd7a3b69b00ee5cad36fe61fc8c07fdbf27367adb8b936075c1f3cb8fbb9cd611d71fd812644d3fd06b8db
+
+    depends_on:
+        db:
+            condition: service_healthy
     container_name: nodejs-app
     restart: unless-stopped
+    networks:
+      - tower-net
+
+  db:
+    image: postgres:17-alpine
+    container_name: stream_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: thetower_db
+      POSTGRES_PASSWORD: thetower_db
+      POSTGRES_DB: stream_chat_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U thetower_db -d stream_chat_db"]
+        interval: 5s
+        timeout: 5s
+        retries: 5
     networks:
       - tower-net
 
@@ -23,12 +49,15 @@ services:
     container_name: cloudflare-tunnel
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token eyJhIjoiN2M1Y2NkODYzNjc1YzAyMTZkZmU2NWUyZjI0OTY2ZTIiLCJ0IjoiNjFhY2Y0YjQtZjY2OC00NTcxLWIwYjMtZTJjMzc3OTgzY2FjIiwicyI6Ik9HWTBNMkV4TWpndE5qQmxOeTAwTjJNNUxXSmhPRFV0WTJJMFpUZGpNRGd6TkdGbCJ9
-
     depends_on:
       - nginx
     networks:
       - tower-net
 
+volumes:
+  pg_data:
+
 networks:
   tower-net:
     driver: bridge
+
